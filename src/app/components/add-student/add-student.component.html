@@ -1,0 +1,66 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 jumbotron">
+      <form [formGroup]="studentForm" (ngSubmit)="saveStudent(studentForm.value)">
+        <div class="form-group">
+          <label>First Name</label>
+          <input type="text" formControlName="firstName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Last Name</label>
+          <input type="text" formControlName="lastName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" formControlName="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>DOB</label>
+          <input type="date" formControlName="dob" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Mobile No</label>
+          <input type="number" formControlName="mobileNo" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Gender</label>
+          <input type="radio" formControlName="gender" value="Male" class="form-check-inline">Male
+          <input type="radio" formControlName="gender" value="Female" class="form-check-inline">Female
+        </div>
+        <div class="form-group" >
+          <label>Process Status</label>
+          <input type="radio" formControlName="processStatus" value="Submitted" class="form-check-inline">Submitted
+          <input type="radio" formControlName="processStatus" value="Not Submitted" class="form-check-inline">Not Submitted
+        </div>
+        <div class="form-group" formGroupName="address">
+          <label class="font-weight-bold">Address</label>
+          <div class="form-group">
+            <label>Street Name</label>
+            <input type="text" formControlName="streetName" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>City Name</label>
+            <input type="text" formControlName="cityName" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>State Name</label>
+            <input type="text" formControlName="stateName" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Zipcode</label>
+            <input type="number" formControlName="zipCode" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Country Name</label>
+            <input type="text" formControlName="countryName" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success">Save</button>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>

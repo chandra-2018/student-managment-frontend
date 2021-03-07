@@ -1,0 +1,39 @@
+<div>
+  <h1>Student Lists</h1>
+</div>
+<div>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>DOB</th>
+      <th>Gender</th>
+      <th>Mobile No</th>
+      <th>Process Status</th>
+      <th>Street Name</th>
+      <th>City Name</th>
+      <th>State Name</th>
+      <th>Zip Code</th>
+      <th>Country Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let student of students">
+      <td>{{student.id}}</td>
+      <td>{{student.firstName}}, {{student.lastName}}</td>
+      <td>{{student.email}}</td>
+      <td>{{student.dob}}</td>
+      <td>{{student.gender}}</td>
+      <td>{{student.mobileNo}}</td>
+      <td>{{student.processStatus}}</td>
+      <td>{{student.address.streetName}}</td>
+      <td>{{student.address.cityName}}</td>
+      <td>{{student.address.stateName}}</td>
+      <td>{{student.address.zipCode}}</td>
+      <td>{{student.address.countryName}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
